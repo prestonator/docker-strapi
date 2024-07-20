@@ -44,7 +44,7 @@ jobs:
             STRAPI_VERSION=${{steps.vars.outputs.tag}}
             NODE_VERSION=18
             NODE=node
-          # platforms: linux/amd64,linux/arm64,linux/arm/v7
+            platforms: linux/amd64
           push: true
           tags: |
             ${{ secrets.DOCKER_USERNAME }}/strapi:${{ steps.vars.outputs.tag }}
@@ -58,7 +58,7 @@ jobs:
             STRAPI_VERSION=${{ steps.vars.outputs.tag }}
             NODE_VERSION=18
             NODE=node
-          # platforms: linux/amd64,linux/arm64,linux/arm/v7
+            platforms: linux/amd64
           push: true
           tags: |
             ${{ secrets.DOCKER_USERNAME }}/strapi:${{ steps.vars.outputs.tag }}-alpine
@@ -72,7 +72,7 @@ jobs:
             STRAPI_VERSION=${{steps.vars.outputs.tag}}
             NODE_VERSION=18
             NODE=arm64v8/node
-          # platforms: linux/amd64,linux/arm64,linux/arm/v7
+            platforms: linux/arm64
           push: true
           tags: |
             ${{ secrets.DOCKER_USERNAME }}/strapi:${{ steps.vars.outputs.tag }}-arm64
@@ -86,7 +86,7 @@ jobs:
             STRAPI_VERSION=${{ steps.vars.outputs.tag }}
             NODE_VERSION=18
             NODE=arm64v8/node
-          # platforms: linux/amd64,linux/arm64,linux/arm/v7
+            platforms: linux/arm64
           push: true
           tags: |
             ${{ secrets.DOCKER_USERNAME }}/strapi:${{ steps.vars.outputs.tag }}-alpine-arm64
