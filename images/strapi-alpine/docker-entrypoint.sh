@@ -12,7 +12,7 @@ if [ "$*" = "strapi" ]; then
     echo "Using strapi v$STRAPI_VERSION"
     echo "No project found at /srv/app. Creating a new strapi project ..."
 
-    yarn create strapi-app@$STRAPI_VERSION . --no-run \
+    yarn create strapi-app@$STRAPI_VERSION . --no-run --skip-cloud \
       --dbclient=$DATABASE_CLIENT \
       --dbhost=$DATABASE_HOST \
       --dbport=$DATABASE_PORT \
