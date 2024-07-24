@@ -10,7 +10,8 @@ name: Publish Docker Image
 on:
   push:
     paths:
-      - 'release-versions/*'
+      - 'release-versions/**'
+  workflow_dispatch: # Allows manual triggering
 
 jobs:
   build:
