@@ -11,7 +11,6 @@ RUN mkdir -p /srv/app && chown 1000:1000 -R /srv/app
 ARG STRAPI_VERSION=latest
 
 ENV STRAPI_VERSION=$STRAPI_VERSION
-RUN yarn global add create-strapi-app@${STRAPI_VERSION}
 
 WORKDIR /srv/app
 
